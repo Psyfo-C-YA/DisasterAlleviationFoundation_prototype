@@ -27,6 +27,9 @@ namespace DisasterAlleviationFoundation_prototype
         {
             services.AddControllersWithViews();
 
+            services.AddDbContext<DisasterAlleviationFoundation_prototypeDBContext> (options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("DisasterAlleviationFoundation_prototypeContext")));
+
             services.AddDbContext<DisasterAlleviationFoundation_prototypeContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("DisasterAlleviationFoundation_prototypeContext")));
 

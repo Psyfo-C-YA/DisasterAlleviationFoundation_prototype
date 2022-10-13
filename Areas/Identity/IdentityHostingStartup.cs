@@ -3,7 +3,7 @@ using DisasterAlleviationFoundation_prototype.Areas.Identity.Data;
 using DisasterAlleviationFoundation_prototype.Data;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
-//using Microsoft.AspNetCore.Identity.UI;
+using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -20,8 +20,8 @@ namespace DisasterAlleviationFoundation_prototype.Areas.Identity
                     options.UseSqlServer(
                         context.Configuration.GetConnectionString("DisasterAlleviationFoundation_prototypeDBContextConnection")));
 
-                //services.AddDefaultIdentity<DisasterAlleviationFoundation_prototypeUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                    //.AddEntityFrameworkStores<DisasterAlleviationFoundation_prototypeDBContext>();
+                services.AddDefaultIdentity<DisasterAlleviationFoundation_prototypeUser>(options => options.SignIn.RequireConfirmedAccount = true)
+                    .AddEntityFrameworkStores<DisasterAlleviationFoundation_prototypeDBContext>();
             });
         }
     }
