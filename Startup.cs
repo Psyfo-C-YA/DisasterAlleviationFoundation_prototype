@@ -29,6 +29,8 @@ namespace DisasterAlleviationFoundation_prototype
 
             services.AddDbContext<DisasterAlleviationFoundation_prototypeContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("DisasterAlleviationFoundation_prototypeContext")));
+
+            services.AddRazorPages();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -49,6 +51,8 @@ namespace DisasterAlleviationFoundation_prototype
 
             app.UseRouting();
 
+            app.UseAuthentication();
+
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
@@ -56,6 +60,7 @@ namespace DisasterAlleviationFoundation_prototype
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapRazorPages();
             });
         }
     }

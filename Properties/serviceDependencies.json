@@ -3,6 +3,18 @@
     "mssql1": {
       "type": "mssql",
       "connectionId": "ConnectionStrings:DisasterAlleviationFoundation_prototypeContext"
+    },
+    "mssql2": {
+      "type": "mssql",
+      "connectionId": "ConnectionStrings:DisasterAlleviationFoundation_prototypeDBContextConnection"
+    },
+    "secrets1": {
+      "type": "secrets"
+    },
+    "mssql3": {
+      "type": "mssql",
+      "connectionId": "ConnectionStrings:CloudBasedDisasterAlleviationDB",
+      "dynamicId": null
     }
   }
 }

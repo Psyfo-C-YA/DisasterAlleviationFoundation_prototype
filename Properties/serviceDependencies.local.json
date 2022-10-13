@@ -3,6 +3,20 @@
     "mssql1": {
       "type": "mssql.local",
       "connectionId": "ConnectionStrings:DisasterAlleviationFoundation_prototypeContext"
+    },
+    "mssql2": {
+      "type": "mssql.local",
+      "connectionId": "ConnectionStrings:DisasterAlleviationFoundation_prototypeDBContextConnection"
+    },
+    "secrets1": {
+      "type": "secrets.user"
+    },
+    "mssql3": {
+      "secretStore": "LocalSecretsFile",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/disasteralleviationfoundationserver/databases/DisasterAlleviationFoundationDb",
+      "type": "mssql.azure",
+      "connectionId": "ConnectionStrings:CloudBasedDisasterAlleviationDB",
+      "dynamicId": null
     }
   }
 }
